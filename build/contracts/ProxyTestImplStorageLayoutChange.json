@@ -1,0 +1,317 @@
+{
+  "contractName": "ProxyTestImplStorageLayoutChange",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "a",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "b",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"a\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"b\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/test/Proxy/ProxyTestImplStorageLayoutChange.sol\":\"ProxyTestImplStorageLayoutChange\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/mixin/Initializable.sol\":{\"keccak256\":\"0x9294b51ceeffc60d81315aab9f60551acdc459c11eb2c8e278e3de892086d63f\",\"urls\":[\"bzz-raw://38174fe793bda99914e46612026c4a62e9f54fac7591c25a04209c5d6fdc8cc2\",\"dweb:/ipfs/QmW76HFTphdaDynMauJivowUCytBmfQksyqan9cNVHrspj\"]},\"/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/test/Proxy/ProxyTestImplStorageLayoutChange.sol\":{\"keccak256\":\"0xa5607b9dc88c3b9764333d50f58e7a4db1c5c280e8797fe96a3068ad1cd27f6a\",\"urls\":[\"bzz-raw://f75bee93f02bb5125f4ee2cc6736a566a183699798382bc5498178df43946b9c\",\"dweb:/ipfs/QmUyH31rkRKmuoVEGuCYewt2zcutaLe3E8Qb9Ut2461Bnq\"]}},\"version\":1}",
+  "bytecode": "0x60806040526000805460ff19169055348015601957600080fd5b506096806100286000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80630dbe671f1460375780634df7e3d014604f575b600080fd5b603d6055565b60408051918252519081900360200190f35b603d605b565b60025481565b6001548156fea265627a7a723158205fdb5f44bd5a5903dcc939b39831e17d97f4e0c54236efd78c8f1cfd32af2be364736f6c63430005110032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80630dbe671f1460375780634df7e3d014604f575b600080fd5b603d6055565b60408051918252519081900360200190f35b603d605b565b60025481565b6001548156fea265627a7a723158205fdb5f44bd5a5903dcc939b39831e17d97f4e0c54236efd78c8f1cfd32af2be364736f6c63430005110032",
+  "sourceMap": "94:106:98:-;;;68:5:44;54:19;;-1:-1:-1;;54:19:44;;;94:106:98;5:2:-1;;;;30:1;27;20:12;5:2;94:106:98;;;;;;;",
+  "deployedSourceMap": "94:106:98:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;94:106:98;;;;;;;;;;;;;;;;;;;;;;;;181:16;;;:::i;:::-;;;;;;;;;;;;;;;;159;;;:::i;181:::-;;;;:::o;159:::-;;;;:::o",
+  "source": "pragma solidity ^0.5.2;\n\nimport {Initializable} from \"../../common/mixin/Initializable.sol\";\n\ncontract ProxyTestImplStorageLayoutChange is Initializable {\n    uint256 public b;\n    uint256 public a;\n}\n",
+  "sourcePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/test/Proxy/ProxyTestImplStorageLayoutChange.sol",
+  "ast": {
+    "absolutePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/test/Proxy/ProxyTestImplStorageLayoutChange.sol",
+    "exportedSymbols": {
+      "ProxyTestImplStorageLayoutChange": [
+        25826
+      ]
+    },
+    "id": 25827,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 25817,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:98"
+      },
+      {
+        "absolutePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/mixin/Initializable.sol",
+        "file": "../../common/mixin/Initializable.sol",
+        "id": 25819,
+        "nodeType": "ImportDirective",
+        "scope": 25827,
+        "sourceUnit": 7744,
+        "src": "25:67:98",
+        "symbolAliases": [
+          {
+            "foreign": 25818,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 25820,
+              "name": "Initializable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 7743,
+              "src": "139:13:98",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Initializable_$7743",
+                "typeString": "contract Initializable"
+              }
+            },
+            "id": 25821,
+            "nodeType": "InheritanceSpecifier",
+            "src": "139:13:98"
+          }
+        ],
+        "contractDependencies": [
+          7743
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 25826,
+        "linearizedBaseContracts": [
+          25826,
+          7743
+        ],
+        "name": "ProxyTestImplStorageLayoutChange",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 25823,
+            "name": "b",
+            "nodeType": "VariableDeclaration",
+            "scope": 25826,
+            "src": "159:16:98",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 25822,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "159:7:98",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 25825,
+            "name": "a",
+            "nodeType": "VariableDeclaration",
+            "scope": 25826,
+            "src": "181:16:98",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 25824,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "181:7:98",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 25827,
+        "src": "94:106:98"
+      }
+    ],
+    "src": "0:201:98"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/test/Proxy/ProxyTestImplStorageLayoutChange.sol",
+    "exportedSymbols": {
+      "ProxyTestImplStorageLayoutChange": [
+        25826
+      ]
+    },
+    "id": 25827,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 25817,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:98"
+      },
+      {
+        "absolutePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/mixin/Initializable.sol",
+        "file": "../../common/mixin/Initializable.sol",
+        "id": 25819,
+        "nodeType": "ImportDirective",
+        "scope": 25827,
+        "sourceUnit": 7744,
+        "src": "25:67:98",
+        "symbolAliases": [
+          {
+            "foreign": 25818,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 25820,
+              "name": "Initializable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 7743,
+              "src": "139:13:98",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Initializable_$7743",
+                "typeString": "contract Initializable"
+              }
+            },
+            "id": 25821,
+            "nodeType": "InheritanceSpecifier",
+            "src": "139:13:98"
+          }
+        ],
+        "contractDependencies": [
+          7743
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 25826,
+        "linearizedBaseContracts": [
+          25826,
+          7743
+        ],
+        "name": "ProxyTestImplStorageLayoutChange",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 25823,
+            "name": "b",
+            "nodeType": "VariableDeclaration",
+            "scope": 25826,
+            "src": "159:16:98",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 25822,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "159:7:98",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 25825,
+            "name": "a",
+            "nodeType": "VariableDeclaration",
+            "scope": 25826,
+            "src": "181:16:98",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 25824,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "181:7:98",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 25827,
+        "src": "94:106:98"
+      }
+    ],
+    "src": "0:201:98"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Linux.g++"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.14",
+  "updatedAt": "2021-07-26T16:29:42.473Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

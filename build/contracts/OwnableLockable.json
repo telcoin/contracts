@@ -1,0 +1,797 @@
+{
+  "contractName": "OwnableLockable",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "locked",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "lock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "unlock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"lock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"locked\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"unlock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isOwner()\":{\"return\":\"true if `msg.sender` is the owner of the contract.\"},\"owner()\":{\"return\":\"the address of the owner.\"},\"renounceOwnership()\":{\"details\":\"Allows the current owner to relinquish control of the contract. It will not be possible to call the functions with the `onlyOwner` modifier anymore.\"},\"transferOwnership(address)\":{\"details\":\"Allows the current owner to transfer control of the contract to a newOwner.\",\"params\":{\"newOwner\":\"The address to transfer ownership to.\"}}}},\"userdoc\":{\"methods\":{\"renounceOwnership()\":{\"notice\":\"Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/mixin/OwnableLockable.sol\":\"OwnableLockable\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/mixin/Lockable.sol\":{\"keccak256\":\"0x59d2acf07b49a615d1bb5be488fdbc819a4b31c318a99800802455fc8ea1d562\",\"urls\":[\"bzz-raw://165e0ff5c1cb060ec4ffc7f2e352d38402959ecab77de2de1e39d6a637058220\",\"dweb:/ipfs/QmXtFFpKq5VBLwmfabs9oBiH56aTmWQzJqRWmyJnmbi5cT\"]},\"/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/mixin/OwnableLockable.sol\":{\"keccak256\":\"0xaf455d53353177b1dc58d21edb786dfbc34cfb3000aa35695cd6ed78ee69cf36\",\"urls\":[\"bzz-raw://2e07b16b09180740c94abff82927ab1ec652c2869dc6c11169aea4b000adc176\",\"dweb:/ipfs/Qma3u3MeUaFQM9aTE2yyZDgVz7bCmVFLaieUCk1wQbPMxo\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xcb16adc00dcf0d75e0bdf94379f4d5a6d74dca7c74e4183b94e15721159f8a30\",\"urls\":[\"bzz-raw://e7de373f0bd92068fa1173a1bc2f65e80fdc4d929a339796636f65d6ef901005\",\"dweb:/ipfs/Qme26FWF1Ea8f7snvRo1Q3x6JkqHqoWVqYif3qzDGE8JEC\"]}},\"version\":1}",
+  "bytecode": "0x6080604081905260008054610100338102610100600160a81b031990921691909117808355046001600160a01b0316917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a36102b7806100636000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c8063a69df4b51161005b578063a69df4b5146100cc578063cf309012146100d4578063f2fde38b146100dc578063f83d08ba146101025761007d565b8063715018a6146100825780638da5cb5b1461008c5780638f32d59b146100b0575b600080fd5b61008a61010a565b005b61009461016a565b604080516001600160a01b039092168252519081900360200190f35b6100b861017e565b604080519115158252519081900360200190f35b61008a610194565b6100b86101af565b61008a600480360360208110156100f257600080fd5b50356001600160a01b03166101b8565b61008a6101d5565b61011261017e565b61011b57600080fd5b600080546040516101009091046001600160a01b0316907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a360008054610100600160a81b0319169055565b60005461010090046001600160a01b031690565b60005461010090046001600160a01b0316331490565b61019c61017e565b6101a557600080fd5b6101ad6101ee565b565b60005460ff1681565b6101c061017e565b6101c957600080fd5b6101d2816101fa565b50565b6101dd61017e565b6101e657600080fd5b6101ad610273565b6000805460ff19169055565b6001600160a01b03811661020d57600080fd5b600080546040516001600160a01b038085169361010090930416917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0390921661010002610100600160a81b0319909216919091179055565b6000805460ff1916600117905556fea265627a7a72315820a2974cfbb1c64665b2b43799a6f6cbfa721a06115fbbda7b6ee47c8fbcf97d2664736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c8063a69df4b51161005b578063a69df4b5146100cc578063cf309012146100d4578063f2fde38b146100dc578063f83d08ba146101025761007d565b8063715018a6146100825780638da5cb5b1461008c5780638f32d59b146100b0575b600080fd5b61008a61010a565b005b61009461016a565b604080516001600160a01b039092168252519081900360200190f35b6100b861017e565b604080519115158252519081900360200190f35b61008a610194565b6100b86101af565b61008a600480360360208110156100f257600080fd5b50356001600160a01b03166101b8565b61008a6101d5565b61011261017e565b61011b57600080fd5b600080546040516101009091046001600160a01b0316907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a360008054610100600160a81b0319169055565b60005461010090046001600160a01b031690565b60005461010090046001600160a01b0316331490565b61019c61017e565b6101a557600080fd5b6101ad6101ee565b565b60005460ff1681565b6101c061017e565b6101c957600080fd5b6101d2816101fa565b50565b6101dd61017e565b6101e657600080fd5b6101ad610273565b6000805460ff19169055565b6001600160a01b03811661020d57600080fd5b600080546040516001600160a01b038085169361010090930416917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0390921661010002610100600160a81b0319909216919091179055565b6000805460ff1916600117905556fea265627a7a72315820a2974cfbb1c64665b2b43799a6f6cbfa721a06115fbbda7b6ee47c8fbcf97d2664736f6c63430005110032",
+  "sourceMap": "149:188:46:-;;;;;515:6:110;:19;;;524:10;515:19;;-1:-1:-1;;;;;;515:19:110;;;;;;;;;;582:6;-1:-1:-1;;;;;582:6:110;;549:40;;515:6;;549:40;149:188:46;;;;;;",
+  "deployedSourceMap": "149:188:46:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;149:188:46;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1423:137:110;;;:::i;:::-;;659:77;;;:::i;:::-;;;;-1:-1:-1;;;;;659:77:110;;;;;;;;;;;;;;979:90;;;:::i;:::-;;;;;;;;;;;;;;;;;;269:66:46;;;:::i;49:18:45:-;;;:::i;1731:107:110:-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1731:107:110;-1:-1:-1;;;;;1731:107:110;;:::i;201:62:46:-;;;:::i;1423:137:110:-;863:9;:7;:9::i;:::-;855:18;;;;;;1521:1;1505:6;;1484:40;;1505:6;;;;-1:-1:-1;;;;;1505:6:110;;1484:40;;1521:1;;1484:40;1551:1;1534:19;;-1:-1:-1;;;;;;1534:19:110;;;1423:137::o;659:77::-;697:7;723:6;;;;-1:-1:-1;;;;;723:6:110;;659:77::o;979:90::-;1019:4;1056:6;;;;-1:-1:-1;;;;;1056:6:110;1042:10;:20;;979:90::o;269:66:46:-;863:9:110;:7;:9::i;:::-;855:18;;;;;;314:14:46;:12;:14::i;:::-;269:66::o;49:18:45:-;;;;;;:::o;1731:107:110:-;863:9;:7;:9::i;:::-;855:18;;;;;;1803:28;1822:8;1803:18;:28::i;:::-;1731:107;:::o;201:62:46:-;863:9:110;:7;:9::i;:::-;855:18;;;;;;244:12:46;:10;:12::i;301:56:45:-;345:5;336:14;;-1:-1:-1;;336:14:45;;;301:56::o;1982:183:110:-;-1:-1:-1;;;;;2055:22:110;;2047:31;;;;;;2114:6;;;2093:38;;-1:-1:-1;;;;;2093:38:110;;;;2114:6;;;;;;2093:38;;;2141:6;:17;;-1:-1:-1;;;;;2141:17:110;;;;;-1:-1:-1;;;;;;2141:17:110;;;;;;;;;1982:183::o;242:53:45:-;275:6;:13;;-1:-1:-1;;275:13:45;284:4;275:13;;;242:53::o",
+  "source": "pragma solidity ^0.5.2;\nimport { Lockable } from \"./Lockable.sol\";\nimport { Ownable } from \"openzeppelin-solidity/contracts/ownership/Ownable.sol\";\n\ncontract OwnableLockable is Lockable, Ownable {\n    function lock() public onlyOwner {\n        super.lock();\n    }\n\n    function unlock() public onlyOwner {\n        super.unlock();\n    }\n}\n",
+  "sourcePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/mixin/OwnableLockable.sol",
+  "ast": {
+    "absolutePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/mixin/OwnableLockable.sol",
+    "exportedSymbols": {
+      "OwnableLockable": [
+        7814
+      ]
+    },
+    "id": 7815,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7783,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:46"
+      },
+      {
+        "absolutePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/mixin/Lockable.sol",
+        "file": "./Lockable.sol",
+        "id": 7785,
+        "nodeType": "ImportDirective",
+        "scope": 7815,
+        "sourceUnit": 7782,
+        "src": "24:42:46",
+        "symbolAliases": [
+          {
+            "foreign": 7784,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "id": 7787,
+        "nodeType": "ImportDirective",
+        "scope": 7815,
+        "sourceUnit": 26575,
+        "src": "67:80:46",
+        "symbolAliases": [
+          {
+            "foreign": 7786,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 7788,
+              "name": "Lockable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 7781,
+              "src": "177:8:46",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Lockable_$7781",
+                "typeString": "contract Lockable"
+              }
+            },
+            "id": 7789,
+            "nodeType": "InheritanceSpecifier",
+            "src": "177:8:46"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 7790,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 26574,
+              "src": "187:7:46",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$26574",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 7791,
+            "nodeType": "InheritanceSpecifier",
+            "src": "187:7:46"
+          }
+        ],
+        "contractDependencies": [
+          7781,
+          26574
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7814,
+        "linearizedBaseContracts": [
+          7814,
+          26574,
+          7781
+        ],
+        "name": "OwnableLockable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 7801,
+              "nodeType": "Block",
+              "src": "234:29:46",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 7796,
+                        "name": "super",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29245,
+                        "src": "244:5:46",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_super$_OwnableLockable_$7814",
+                          "typeString": "contract super OwnableLockable"
+                        }
+                      },
+                      "id": 7798,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "lock",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 7772,
+                      "src": "244:10:46",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 7799,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "244:12:46",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7800,
+                  "nodeType": "ExpressionStatement",
+                  "src": "244:12:46"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7802,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 7794,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 7793,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 26508,
+                  "src": "224:9:46",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "224:9:46"
+              }
+            ],
+            "name": "lock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7792,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "214:2:46"
+            },
+            "returnParameters": {
+              "id": 7795,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "234:0:46"
+            },
+            "scope": 7814,
+            "src": "201:62:46",
+            "stateMutability": "nonpayable",
+            "superFunction": 7772,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7812,
+              "nodeType": "Block",
+              "src": "304:31:46",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 7807,
+                        "name": "super",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29245,
+                        "src": "314:5:46",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_super$_OwnableLockable_$7814",
+                          "typeString": "contract super OwnableLockable"
+                        }
+                      },
+                      "id": 7809,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "unlock",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 7780,
+                      "src": "314:12:46",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 7810,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "314:14:46",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7811,
+                  "nodeType": "ExpressionStatement",
+                  "src": "314:14:46"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7813,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 7805,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 7804,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 26508,
+                  "src": "294:9:46",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "294:9:46"
+              }
+            ],
+            "name": "unlock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7803,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "284:2:46"
+            },
+            "returnParameters": {
+              "id": 7806,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "304:0:46"
+            },
+            "scope": 7814,
+            "src": "269:66:46",
+            "stateMutability": "nonpayable",
+            "superFunction": 7780,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7815,
+        "src": "149:188:46"
+      }
+    ],
+    "src": "0:338:46"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/mixin/OwnableLockable.sol",
+    "exportedSymbols": {
+      "OwnableLockable": [
+        7814
+      ]
+    },
+    "id": 7815,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7783,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:46"
+      },
+      {
+        "absolutePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/mixin/Lockable.sol",
+        "file": "./Lockable.sol",
+        "id": 7785,
+        "nodeType": "ImportDirective",
+        "scope": 7815,
+        "sourceUnit": 7782,
+        "src": "24:42:46",
+        "symbolAliases": [
+          {
+            "foreign": 7784,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "id": 7787,
+        "nodeType": "ImportDirective",
+        "scope": 7815,
+        "sourceUnit": 26575,
+        "src": "67:80:46",
+        "symbolAliases": [
+          {
+            "foreign": 7786,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 7788,
+              "name": "Lockable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 7781,
+              "src": "177:8:46",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Lockable_$7781",
+                "typeString": "contract Lockable"
+              }
+            },
+            "id": 7789,
+            "nodeType": "InheritanceSpecifier",
+            "src": "177:8:46"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 7790,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 26574,
+              "src": "187:7:46",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$26574",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 7791,
+            "nodeType": "InheritanceSpecifier",
+            "src": "187:7:46"
+          }
+        ],
+        "contractDependencies": [
+          7781,
+          26574
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7814,
+        "linearizedBaseContracts": [
+          7814,
+          26574,
+          7781
+        ],
+        "name": "OwnableLockable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 7801,
+              "nodeType": "Block",
+              "src": "234:29:46",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 7796,
+                        "name": "super",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29245,
+                        "src": "244:5:46",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_super$_OwnableLockable_$7814",
+                          "typeString": "contract super OwnableLockable"
+                        }
+                      },
+                      "id": 7798,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "lock",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 7772,
+                      "src": "244:10:46",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 7799,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "244:12:46",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7800,
+                  "nodeType": "ExpressionStatement",
+                  "src": "244:12:46"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7802,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 7794,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 7793,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 26508,
+                  "src": "224:9:46",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "224:9:46"
+              }
+            ],
+            "name": "lock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7792,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "214:2:46"
+            },
+            "returnParameters": {
+              "id": 7795,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "234:0:46"
+            },
+            "scope": 7814,
+            "src": "201:62:46",
+            "stateMutability": "nonpayable",
+            "superFunction": 7772,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7812,
+              "nodeType": "Block",
+              "src": "304:31:46",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 7807,
+                        "name": "super",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29245,
+                        "src": "314:5:46",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_super$_OwnableLockable_$7814",
+                          "typeString": "contract super OwnableLockable"
+                        }
+                      },
+                      "id": 7809,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "unlock",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 7780,
+                      "src": "314:12:46",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 7810,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "314:14:46",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7811,
+                  "nodeType": "ExpressionStatement",
+                  "src": "314:14:46"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7813,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 7805,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 7804,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 26508,
+                  "src": "294:9:46",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "294:9:46"
+              }
+            ],
+            "name": "unlock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7803,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "284:2:46"
+            },
+            "returnParameters": {
+              "id": 7806,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "304:0:46"
+            },
+            "scope": 7814,
+            "src": "269:66:46",
+            "stateMutability": "nonpayable",
+            "superFunction": 7780,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7815,
+        "src": "149:188:46"
+      }
+    ],
+    "src": "0:338:46"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Linux.g++"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.14",
+  "updatedAt": "2021-07-26T16:29:42.170Z",
+  "devdoc": {
+    "methods": {
+      "isOwner()": {
+        "return": "true if `msg.sender` is the owner of the contract."
+      },
+      "owner()": {
+        "return": "the address of the owner."
+      },
+      "renounceOwnership()": {
+        "details": "Allows the current owner to relinquish control of the contract. It will not be possible to call the functions with the `onlyOwner` modifier anymore."
+      },
+      "transferOwnership(address)": {
+        "details": "Allows the current owner to transfer control of the contract to a newOwner.",
+        "params": {
+          "newOwner": "The address to transfer ownership to."
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "renounceOwnership()": {
+        "notice": "Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      }
+    }
+  }
+}

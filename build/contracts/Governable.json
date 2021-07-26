@@ -1,0 +1,1026 @@
+{
+  "contractName": "Governable",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_governance",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "governance",
+      "outputs": [
+        {
+          "internalType": "contract IGovernance",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_governance\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"governance\",\"outputs\":[{\"internalType\":\"contract IGovernance\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/governance/Governable.sol\":\"Governable\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/governance/Governable.sol\":{\"keccak256\":\"0xc6039fc5f9cd606721afc20b51248040531adb7b2c7e8aa1931aee98114bc2b1\",\"urls\":[\"bzz-raw://f8626f084251f5dd581773f48bdd68a47eb93beeb1ec9eeaa116f04c7b2f1cd8\",\"dweb:/ipfs/Qmb2pGgXovzgwWEP6KnpXt9p9tszHgfqck8j4TCF9J9nRN\"]},\"/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/governance/IGovernance.sol\":{\"keccak256\":\"0x81b923a9b6ee8ee89a9741b5a74bc1318c5e570e09a66e20e26cb8850d76b367\",\"urls\":[\"bzz-raw://a634cba0419365bbbcb507ba519ea912e96ce0ad1369c736c5059ed3c86441a6\",\"dweb:/ipfs/QmTQSA3KNDo9yiZboXqNDSCSVbUshudqJNLMrXGcnxRJM3\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516100f73803806100f78339818101604052602081101561003357600080fd5b5051600080546001600160a01b039092166001600160a01b03199092169190911790556093806100646000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80635aa6e67514602d575b600080fd5b6033604f565b604080516001600160a01b039092168252519081900360200190f35b6000546001600160a01b03168156fea265627a7a72315820ec16e9eaa6b9abaa4188f5d07ea5c08b7c2436c2a6e770368766984d84cab25564736f6c63430005110032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80635aa6e67514602d575b600080fd5b6033604f565b604080516001600160a01b039092168252519081900360200190f35b6000546001600160a01b03168156fea265627a7a72315820ec16e9eaa6b9abaa4188f5d07ea5c08b7c2436c2a6e770368766984d84cab25564736f6c63430005110032",
+  "sourceMap": "73:420:22:-;;;135:94;8:9:-1;5:2;;;30:1;27;20:12;5:2;135:94:22;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;135:94:22;185:10;:37;;-1:-1:-1;;;;;185:37:22;;;-1:-1:-1;;;;;;185:37:22;;;;;;;;;73:420;;;;;;",
+  "deployedSourceMap": "73:420:22:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;73:420:22;;;;;;;;;;;;;;;;;;;99:29;;;:::i;:::-;;;;-1:-1:-1;;;;;99:29:22;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;99:29:22;;:::o",
+  "source": "pragma solidity ^0.5.2;\n\nimport {IGovernance} from \"./IGovernance.sol\";\n\ncontract Governable {\n    IGovernance public governance;\n\n    constructor(address _governance) public {\n        governance = IGovernance(_governance);\n    }\n\n    modifier onlyGovernance() {\n        _assertGovernance();\n        _;\n    }\n\n    function _assertGovernance() private view {\n        require(\n            msg.sender == address(governance),\n            \"Only governance contract is authorized\"\n        );\n    }\n}\n",
+  "sourcePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/governance/Governable.sol",
+  "ast": {
+    "absolutePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/governance/Governable.sol",
+    "exportedSymbols": {
+      "Governable": [
+        5181
+      ]
+    },
+    "id": 5182,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5143,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:22"
+      },
+      {
+        "absolutePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/governance/IGovernance.sol",
+        "file": "./IGovernance.sol",
+        "id": 5145,
+        "nodeType": "ImportDirective",
+        "scope": 5182,
+        "sourceUnit": 5241,
+        "src": "25:46:22",
+        "symbolAliases": [
+          {
+            "foreign": 5144,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5181,
+        "linearizedBaseContracts": [
+          5181
+        ],
+        "name": "Governable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 5147,
+            "name": "governance",
+            "nodeType": "VariableDeclaration",
+            "scope": 5181,
+            "src": "99:29:22",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IGovernance_$5240",
+              "typeString": "contract IGovernance"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 5146,
+              "name": "IGovernance",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5240,
+              "src": "99:11:22",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IGovernance_$5240",
+                "typeString": "contract IGovernance"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5158,
+              "nodeType": "Block",
+              "src": "175:54:22",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5156,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 5152,
+                      "name": "governance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5147,
+                      "src": "185:10:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IGovernance_$5240",
+                        "typeString": "contract IGovernance"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 5154,
+                          "name": "_governance",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 5149,
+                          "src": "210:11:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 5153,
+                        "name": "IGovernance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5240,
+                        "src": "198:11:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IGovernance_$5240_$",
+                          "typeString": "type(contract IGovernance)"
+                        }
+                      },
+                      "id": 5155,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "198:24:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IGovernance_$5240",
+                        "typeString": "contract IGovernance"
+                      }
+                    },
+                    "src": "185:37:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IGovernance_$5240",
+                      "typeString": "contract IGovernance"
+                    }
+                  },
+                  "id": 5157,
+                  "nodeType": "ExpressionStatement",
+                  "src": "185:37:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5159,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5150,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5149,
+                  "name": "_governance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5159,
+                  "src": "147:19:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5148,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "147:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "146:21:22"
+            },
+            "returnParameters": {
+              "id": 5151,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "175:0:22"
+            },
+            "scope": 5181,
+            "src": "135:94:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5165,
+              "nodeType": "Block",
+              "src": "261:47:22",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 5161,
+                      "name": "_assertGovernance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5180,
+                      "src": "271:17:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$__$",
+                        "typeString": "function () view"
+                      }
+                    },
+                    "id": 5162,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "271:19:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5163,
+                  "nodeType": "ExpressionStatement",
+                  "src": "271:19:22"
+                },
+                {
+                  "id": 5164,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "300:1:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5166,
+            "name": "onlyGovernance",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 5160,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "258:2:22"
+            },
+            "src": "235:73:22",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 5179,
+              "nodeType": "Block",
+              "src": "356:135:22",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 5175,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 5170,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 29054,
+                            "src": "387:3:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 5171,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "387:10:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 5173,
+                              "name": "governance",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 5147,
+                              "src": "409:10:22",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IGovernance_$5240",
+                                "typeString": "contract IGovernance"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_IGovernance_$5240",
+                                "typeString": "contract IGovernance"
+                              }
+                            ],
+                            "id": 5172,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "401:7:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 5174,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "401:19:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "387:33:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4f6e6c7920676f7665726e616e636520636f6e747261637420697320617574686f72697a6564",
+                        "id": 5176,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "434:40:22",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_e130f5e3cf9c13676de6ed2b4503a81e246d2238718db208e3cffbe475da0364",
+                          "typeString": "literal_string \"Only governance contract is authorized\""
+                        },
+                        "value": "Only governance contract is authorized"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_e130f5e3cf9c13676de6ed2b4503a81e246d2238718db208e3cffbe475da0364",
+                          "typeString": "literal_string \"Only governance contract is authorized\""
+                        }
+                      ],
+                      "id": 5169,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        29057,
+                        29058
+                      ],
+                      "referencedDeclaration": 29058,
+                      "src": "366:7:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 5177,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "366:118:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5178,
+                  "nodeType": "ExpressionStatement",
+                  "src": "366:118:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5180,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_assertGovernance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5167,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "340:2:22"
+            },
+            "returnParameters": {
+              "id": 5168,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "356:0:22"
+            },
+            "scope": 5181,
+            "src": "314:177:22",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "private"
+          }
+        ],
+        "scope": 5182,
+        "src": "73:420:22"
+      }
+    ],
+    "src": "0:494:22"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/governance/Governable.sol",
+    "exportedSymbols": {
+      "Governable": [
+        5181
+      ]
+    },
+    "id": 5182,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5143,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:22"
+      },
+      {
+        "absolutePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/common/governance/IGovernance.sol",
+        "file": "./IGovernance.sol",
+        "id": 5145,
+        "nodeType": "ImportDirective",
+        "scope": 5182,
+        "sourceUnit": 5241,
+        "src": "25:46:22",
+        "symbolAliases": [
+          {
+            "foreign": 5144,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5181,
+        "linearizedBaseContracts": [
+          5181
+        ],
+        "name": "Governable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 5147,
+            "name": "governance",
+            "nodeType": "VariableDeclaration",
+            "scope": 5181,
+            "src": "99:29:22",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IGovernance_$5240",
+              "typeString": "contract IGovernance"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 5146,
+              "name": "IGovernance",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5240,
+              "src": "99:11:22",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IGovernance_$5240",
+                "typeString": "contract IGovernance"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5158,
+              "nodeType": "Block",
+              "src": "175:54:22",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5156,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 5152,
+                      "name": "governance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5147,
+                      "src": "185:10:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IGovernance_$5240",
+                        "typeString": "contract IGovernance"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 5154,
+                          "name": "_governance",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 5149,
+                          "src": "210:11:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 5153,
+                        "name": "IGovernance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5240,
+                        "src": "198:11:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IGovernance_$5240_$",
+                          "typeString": "type(contract IGovernance)"
+                        }
+                      },
+                      "id": 5155,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "198:24:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IGovernance_$5240",
+                        "typeString": "contract IGovernance"
+                      }
+                    },
+                    "src": "185:37:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IGovernance_$5240",
+                      "typeString": "contract IGovernance"
+                    }
+                  },
+                  "id": 5157,
+                  "nodeType": "ExpressionStatement",
+                  "src": "185:37:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5159,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5150,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5149,
+                  "name": "_governance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5159,
+                  "src": "147:19:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5148,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "147:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "146:21:22"
+            },
+            "returnParameters": {
+              "id": 5151,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "175:0:22"
+            },
+            "scope": 5181,
+            "src": "135:94:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5165,
+              "nodeType": "Block",
+              "src": "261:47:22",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 5161,
+                      "name": "_assertGovernance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5180,
+                      "src": "271:17:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$__$",
+                        "typeString": "function () view"
+                      }
+                    },
+                    "id": 5162,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "271:19:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5163,
+                  "nodeType": "ExpressionStatement",
+                  "src": "271:19:22"
+                },
+                {
+                  "id": 5164,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "300:1:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5166,
+            "name": "onlyGovernance",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 5160,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "258:2:22"
+            },
+            "src": "235:73:22",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 5179,
+              "nodeType": "Block",
+              "src": "356:135:22",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 5175,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 5170,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 29054,
+                            "src": "387:3:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 5171,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "387:10:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 5173,
+                              "name": "governance",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 5147,
+                              "src": "409:10:22",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IGovernance_$5240",
+                                "typeString": "contract IGovernance"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_IGovernance_$5240",
+                                "typeString": "contract IGovernance"
+                              }
+                            ],
+                            "id": 5172,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "401:7:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 5174,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "401:19:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "387:33:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4f6e6c7920676f7665726e616e636520636f6e747261637420697320617574686f72697a6564",
+                        "id": 5176,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "434:40:22",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_e130f5e3cf9c13676de6ed2b4503a81e246d2238718db208e3cffbe475da0364",
+                          "typeString": "literal_string \"Only governance contract is authorized\""
+                        },
+                        "value": "Only governance contract is authorized"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_e130f5e3cf9c13676de6ed2b4503a81e246d2238718db208e3cffbe475da0364",
+                          "typeString": "literal_string \"Only governance contract is authorized\""
+                        }
+                      ],
+                      "id": 5169,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        29057,
+                        29058
+                      ],
+                      "referencedDeclaration": 29058,
+                      "src": "366:7:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 5177,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "366:118:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5178,
+                  "nodeType": "ExpressionStatement",
+                  "src": "366:118:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5180,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_assertGovernance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5167,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "340:2:22"
+            },
+            "returnParameters": {
+              "id": 5168,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "356:0:22"
+            },
+            "scope": 5181,
+            "src": "314:177:22",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "private"
+          }
+        ],
+        "scope": 5182,
+        "src": "73:420:22"
+      }
+    ],
+    "src": "0:494:22"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Linux.g++"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.14",
+  "updatedAt": "2021-07-26T16:29:42.136Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

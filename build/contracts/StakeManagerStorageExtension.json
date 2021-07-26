@@ -1,0 +1,759 @@
+{
+  "contractName": "StakeManagerStorageExtension",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "checkpointRewardDelta",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "eventsHub",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "extensionCode",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "maxRewardedCheckpoints",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "prevBlockInterval",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "rewardDecreasePerCheckpoint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "rewardPerStake",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "signers",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"checkpointRewardDelta\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"eventsHub\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"extensionCode\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"maxRewardedCheckpoints\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"prevBlockInterval\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"rewardDecreasePerCheckpoint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"rewardPerStake\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"signers\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/staking/stakeManager/StakeManagerStorageExtension.sol\":\"StakeManagerStorageExtension\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/staking/stakeManager/StakeManagerStorageExtension.sol\":{\"keccak256\":\"0x3010a7a6b671b35443c663319f417636010fe4dd0f614948ab569fe285c0e18a\",\"urls\":[\"bzz-raw://101b9eb31916dc9e21f0b2838e533c837e8659fd59d41402eb56a579f26779be\",\"dweb:/ipfs/QmVCPviscShBFiu44LAxgthMoKpkGkcCqD2fe22Wf3pbCy\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101a8806100206000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c806391f1a3a51161005b57806391f1a3a5146100f0578063a8dc889b146100f8578063e568959a14610100578063f8a3176c1461010857610088565b80632079fb9a1461008d578063451b5985146100c65780637c7eaf1a146100e0578063883b455f146100e8575b600080fd5b6100aa600480360360208110156100a357600080fd5b5035610110565b604080516001600160a01b039092168252519081900360200190f35b6100ce610137565b60408051918252519081900360200190f35b6100ce61013d565b6100aa610143565b6100ce610152565b6100ce610158565b6100ce61015e565b6100aa610164565b6003818154811061011d57fe5b6000918252602090912001546001600160a01b0316905081565b60065481565b60075481565b6000546001600160a01b031681565b60045481565b60015481565b60055481565b6002546001600160a01b03168156fea265627a7a72315820b2ae04892bc50828d886f5a8f3246cfb82574a44f15a8804f7eb10215478ae1264736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c806391f1a3a51161005b57806391f1a3a5146100f0578063a8dc889b146100f8578063e568959a14610100578063f8a3176c1461010857610088565b80632079fb9a1461008d578063451b5985146100c65780637c7eaf1a146100e0578063883b455f146100e8575b600080fd5b6100aa600480360360208110156100a357600080fd5b5035610110565b604080516001600160a01b039092168252519081900360200190f35b6100ce610137565b60408051918252519081900360200190f35b6100ce61013d565b6100aa610143565b6100ce610152565b6100ce610158565b6100ce61015e565b6100aa610164565b6003818154811061011d57fe5b6000918252602090912001546001600160a01b0316905081565b60065481565b60075481565b6000546001600160a01b031681565b60045481565b60015481565b60055481565b6002546001600160a01b03168156fea265627a7a72315820b2ae04892bc50828d886f5a8f3246cfb82574a44f15a8804f7eb10215478ae1264736f6c63430005110032",
+  "sourceMap": "25:566:88:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:566:88;;;;;;;",
+  "deployedSourceMap": "25:566:88:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:566:88;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;168:24;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;168:24:88;;:::i;:::-;;;;-1:-1:-1;;;;;168:24:88;;;;;;;;;;;;;;433:37;;;:::i;:::-;;;;;;;;;;;;;;;;552:36;;;:::i;69:24::-;;;:::i;248:32::-;;;:::i;99:29::-;;;:::i;347:42::-;;;:::i;134:28::-;;;:::i;168:24::-;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;168:24:88;;-1:-1:-1;168:24:88;:::o;433:37::-;;;;:::o;552:36::-;;;;:::o;69:24::-;;;-1:-1:-1;;;;;69:24:88;;:::o;248:32::-;;;;:::o;99:29::-;;;;:::o;347:42::-;;;;:::o;134:28::-;;;-1:-1:-1;;;;;134:28:88;;:::o",
+  "source": "pragma solidity 0.5.17;\n\ncontract StakeManagerStorageExtension {\n    address public eventsHub;\n    uint256 public rewardPerStake;\n    address public extensionCode;\n    address[] public signers;\n\n    uint256 constant CHK_REWARD_PRECISION = 100;\n    uint256 public prevBlockInterval;\n    // how much less reward per skipped checkpoint, 0 - 100%\n    uint256 public rewardDecreasePerCheckpoint;\n    // how many checkpoints to reward\n    uint256 public maxRewardedCheckpoints;\n    // increase / decrease value for faster or slower checkpoints, 0 - 100%\n    uint256 public checkpointRewardDelta;\n}   \n",
+  "sourcePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/staking/stakeManager/StakeManagerStorageExtension.sol",
+  "ast": {
+    "absolutePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/staking/stakeManager/StakeManagerStorageExtension.sol",
+    "exportedSymbols": {
+      "StakeManagerStorageExtension": [
+        23759
+      ]
+    },
+    "id": 23760,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 23738,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:88"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 23759,
+        "linearizedBaseContracts": [
+          23759
+        ],
+        "name": "StakeManagerStorageExtension",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 23740,
+            "name": "eventsHub",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "69:24:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 23739,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "69:7:88",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 23742,
+            "name": "rewardPerStake",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "99:29:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 23741,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "99:7:88",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 23744,
+            "name": "extensionCode",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "134:28:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 23743,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "134:7:88",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 23747,
+            "name": "signers",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "168:24:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 23745,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "168:7:88",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 23746,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "168:9:88",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 23750,
+            "name": "CHK_REWARD_PRECISION",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "199:43:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 23748,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "199:7:88",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "313030",
+              "id": 23749,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "239:3:88",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_100_by_1",
+                "typeString": "int_const 100"
+              },
+              "value": "100"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 23752,
+            "name": "prevBlockInterval",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "248:32:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 23751,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "248:7:88",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 23754,
+            "name": "rewardDecreasePerCheckpoint",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "347:42:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 23753,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "347:7:88",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 23756,
+            "name": "maxRewardedCheckpoints",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "433:37:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 23755,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "433:7:88",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 23758,
+            "name": "checkpointRewardDelta",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "552:36:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 23757,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "552:7:88",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 23760,
+        "src": "25:566:88"
+      }
+    ],
+    "src": "0:595:88"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/tavakayn/Projects/telcoin/telcoin/docker/polygon/code/contracts/contracts/staking/stakeManager/StakeManagerStorageExtension.sol",
+    "exportedSymbols": {
+      "StakeManagerStorageExtension": [
+        23759
+      ]
+    },
+    "id": 23760,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 23738,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:88"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 23759,
+        "linearizedBaseContracts": [
+          23759
+        ],
+        "name": "StakeManagerStorageExtension",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 23740,
+            "name": "eventsHub",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "69:24:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 23739,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "69:7:88",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 23742,
+            "name": "rewardPerStake",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "99:29:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 23741,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "99:7:88",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 23744,
+            "name": "extensionCode",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "134:28:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 23743,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "134:7:88",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 23747,
+            "name": "signers",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "168:24:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 23745,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "168:7:88",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 23746,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "168:9:88",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 23750,
+            "name": "CHK_REWARD_PRECISION",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "199:43:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 23748,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "199:7:88",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "313030",
+              "id": 23749,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "239:3:88",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_100_by_1",
+                "typeString": "int_const 100"
+              },
+              "value": "100"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 23752,
+            "name": "prevBlockInterval",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "248:32:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 23751,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "248:7:88",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 23754,
+            "name": "rewardDecreasePerCheckpoint",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "347:42:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 23753,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "347:7:88",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 23756,
+            "name": "maxRewardedCheckpoints",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "433:37:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 23755,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "433:7:88",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 23758,
+            "name": "checkpointRewardDelta",
+            "nodeType": "VariableDeclaration",
+            "scope": 23759,
+            "src": "552:36:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 23757,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "552:7:88",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 23760,
+        "src": "25:566:88"
+      }
+    ],
+    "src": "0:595:88"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Linux.g++"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.14",
+  "updatedAt": "2021-07-26T16:29:42.443Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
